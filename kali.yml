@@ -1,0 +1,20 @@
+session_name: kali
+start_directory: ~/TryHackMe
+windows:
+- panes:
+  - shell_command: 
+    - sudo openvpn lgbarn1966.ovpn
+  window_name: vpn
+- panes:
+  - shell_command: 
+    - sudo service postgresql start
+    - sudo msfconsole
+  window_name: msfconsole
+- panes:
+  - shell_command: 
+    - sudo -s
+  window_name: nmap
+- panes:
+  - shell_command: 
+    - htop
+  window_name: system
